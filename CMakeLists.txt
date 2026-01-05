@@ -10,6 +10,7 @@ find_package(glfw3 REQUIRED)
 set(COMMON_SOURCES
         "${PROJECT_SOURCE_DIR}/glad.c"
         "${PROJECT_SOURCE_DIR}/utils.cpp"
+        "${PROJECT_SOURCE_DIR}/stb_image.cpp"
         CACHE INTERNAL "Shared sources for all subprojects"
 )
 
@@ -21,4 +22,5 @@ endif()
 # Add subdirectories for each app
 add_subdirectory(hellotriangle)
 add_subdirectory(shaders)
+add_subdirectory(textures)
 
