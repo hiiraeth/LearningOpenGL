@@ -5,7 +5,9 @@ add_executable(textures
         ../shader.h)
 
 target_include_directories(textures PRIVATE ..)
-target_include_directories(textures PRIVATE ../texturefiles)
+
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/../texturefiles"
+        DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/..")
 
 target_link_libraries(textures PRIVATE glfw)
 configure_file(vertex.glsl   ${CMAKE_CURRENT_BINARY_DIR}/vertex.glsl COPYONLY)
